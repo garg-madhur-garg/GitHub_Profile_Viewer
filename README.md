@@ -1,2 +1,2 @@
 # Deployment
-*https://garg-madhur-garg.github.io/GitHub_Profile_Viewer/
+* https://garg-madhur-garg.github.io/GitHub_Profile_Viewer/
