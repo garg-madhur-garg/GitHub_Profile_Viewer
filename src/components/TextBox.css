@@ -1,0 +1,23 @@
+h2{
+    display: flex;
+    /* background-color: indianred; */
+    justify-content: center;
+}
+
+div a button{
+    margin-left: 180px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    margin-right: 2px;
+}
+
+div img{
+    /* width: auto; */
+    border-radius: 45px;
+}
