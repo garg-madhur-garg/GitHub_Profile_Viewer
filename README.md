@@ -1,6 +1,6 @@
 
 # GitHub Profile Viewer
-
+![GPV](https://user-images.githubusercontent.com/72293750/140784091-90b82127-27bd-4f77-a209-9b9ae8e172da.png)
 * Implement a web page that adds one more function to the GitHub search bar for searching user
     profiles.
 * Provide Github Data of a user on the same page.
