@@ -31,7 +31,7 @@ function TextBox() {
     };
 
     const search = (e)=>{
-        fetch(process.env.REACT_APP_GITHUB_API+originalName)
+        fetch("https://api.github.com/users/"+originalName)
         .then(response => response.json())
         .then(data => {
             if(data.message !== "Not Found"){
