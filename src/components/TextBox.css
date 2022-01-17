@@ -12,10 +12,15 @@
     box-sizing: border-box;
     outline: none;
 }
+
+.text-box {
+ width: 100%;
+}
+
 h2 {
     display: flex;
     /* background-color: indianred; */
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 form {
@@ -28,7 +33,7 @@ form {
 
 input {
     border-radius: 120px;
-    width: 300px;
+    width: 100%;
     border: none;
     padding: 5px 20px;
     padding-right: 60px;
@@ -36,12 +41,14 @@ input {
 }
 
 button {
-    border-radius: 120px;
+    border-radius: 22px;
     border: none;
-    padding: 14px;
+    padding: 13px 11px 11px 12px;
     position: absolute;
-    right: 20px;
-    top : 5px;
+    right: 8px;
+    width: 44px;
+    height: 44px;
+    top : 8px;
     background-color: var(--green);
 }
 
