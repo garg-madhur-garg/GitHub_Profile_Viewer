@@ -14,29 +14,18 @@ function TextBox() {
         const profile = (
         <div className="profile-container">
             <div className="profile-img">
-                <div style={{height:"fit-content"}}>
-                    <img height="250px" width="250px" src={data.avatar_url} alt="avatar"/>
-                </div>
-                <div className="login-lockup">
-                    <h3>{data.name}</h3>
-                    <h4>{data.login}</h4>
-                </div>
+                <img src={data.avatar_url} alt="avatar"/>
             </div>
-            <div className="profile-details">
-            <div>
-                    <ul className="profile-follow">
-                        <li><b>Followers:</b> {data.followers}</li>
-                        <li><b>Following:</b> {data.following}</li>
-                    </ul>
-                </div>
-                {data.bio ? <><h2>Bio:</h2><p>{data.bio}</p></>  : null}
-                {data.location ? <><h2>Location:</h2><p>{data.location}</p></> : null}
-                {data.public_repos > 0 ? <h2>Public Repos: {data.public_repos}</h2> : null}
-                {data.public_repos === 0 && !data.location && !data.bio ? <p className="no-data"><br />User has not completed their profile.</p> : null}
-                <a className="profile-link" href={'https://www.github.com/'+ data.login} rel="noreferrer" target="_blank">
-                    <button className="profile-btn">View Full Profile</button>
-                </a>
-            </div>
+            <ul className="profile-follow">
+                <li>Followers: {data.followers}</li>
+                <li>Following: {data.following}</li>
+            </ul>
+            <h2>Bio: {data.bio}</h2>
+            <h2>Location: {data.location}</h2>
+            <h2>Public Repo: {data.public_repos}</h2>
+            <a className="profile-link" href={'https://www.github.com/'+ data.login} target="_blank">
+                <button className="profile-btn">See Profile</button>
+            </a>
         </div> );
         ReactDOM.render(profile, document.getElementById('display'));
     };
@@ -49,7 +38,7 @@ function TextBox() {
                 show(data);
             }
             else{
-                ReactDOM.render(<div className="profile-container">Profile not found.</div>, document.getElementById('display'))
+                document.getElementById("display").innerHTML = "Not Found"
             }
         });
 
@@ -57,7 +46,7 @@ function TextBox() {
     }
 
     return (
-        <div className="text-box">
+        <div className="TextBox">
             <form className="search-form">
                 <input type="text" value={data} onChange={(e) => {setData(e.target.value)}} required placeholder="Username" autoFocus/>
                 <button onClick={search}><BsSearch /></button>
